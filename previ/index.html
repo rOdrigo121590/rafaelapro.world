@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="pt-BR">
+    <meta name="google" content="notranslate">
+    <title>Minha Página</title>
+    <!-- BUILD_EASY_DATA:eyJlbGVtZW50cyI6W3siaWQiOiJlbF8xNzk0OTUyOTY1MTQyXzczZmZna2dkMCIsInR5cGUiOiJzZWN0aW9uIiwiY29udGVudCI6IiIsInN0eWxlcyI6eyJhbmltYXRpb24iOiJub25lIn0sInNlY3Rpb25EYXRhIjp7ImJhY2tncm91bmRDb2xvciI6IiMwMjJiNTUiLCJwYWRkaW5nVG9wIjoiMjRweCIsInBhZGRpbmdCb3R0b20iOiIyNHB4IiwicGFkZGluZ0xlZnQiOiIxNnB4IiwicGFkZGluZ1JpZ2h0IjoiMTZweCJ9LCJjaGlsZHJlbiI6W3siaWQiOiJlbF8xNzk0OTUyOTkxMzcxX2lpajNndjI4MyIsInR5cGUiOiJoZWFkaW5nIiwiY29udGVudCI6Ik5vdm8gUm9tYW5jZSBkZSBFc2NyaXTDs3JpbyIsInN0eWxlcyI6eyJmb250U2l6ZSI6IjI0cHgiLCJmb250V2VpZ2h0IjoiNzAwIiwidGV4dENvbG9yIjoiI2Y3ZjdmOCIsInRleHRBbGlnbiI6ImNlbnRlciIsInBhZGRpbmciOiIxNnB4IiwiYW5pbWF0aW9uIjoibm9uZSJ9fSx7ImlkIjoiZWxfMTc5NDk1MzA5ODc1N19nYzM2bms4bjMiLCJ0eXBlIjoiaW1hZ2UiLCJjb250ZW50IjoiIiwic3R5bGVzIjp7IndpZHRoIjoiMTAwJSIsImhlaWdodCI6ImF1dG8iLCJib3JkZXJSYWRpdXMiOiI4cHgiLCJhbmltYXRpb24iOiJub25lIn0sInNyYyI6Imh0dHBzOi8vcHViLWUxZjVmZGM0NWI2NzQyNjFiMmNjZGE3YjI4NGFmYmI5LnIyLmRldi9pbWFnZXMvMmE0Yzg3YzMtYjdlNy00MjM0LWIwM2QtZWNhZGMwYTkzYzkyLzE3OTQ5NTMwODRfYzk2YTY1MzVhM2RhLmpwZyJ9LHsiaWQiOiJlbF8xNzk0OTUzMTM1MDcxX2RzamFicHptZyIsInR5cGUiOiJ2aWRlbyIsImNvbnRlbnQiOiIiLCJzdHlsZXMiOnsid2lkdGgiOiIxMDAlIiwiaGVpZ2h0IjoiMzE1cHgiLCJib3JkZXJSYWRpdXMiOiI4cHgiLCJhbmltYXRpb24iOiJub25lIn0sInNyYyI6Imh0dHBzOi8vd3d3LnlvdXR1YmUuY29tL2VtYmVkL2RRdzR3OVdnWGNRIn0seyJpZCI6ImVsXzE3OTQ5NTMxODc2MTRfemw1MWZ5aDZkIiwidHlwZSI6Im9mZmVyIiwiY29udGVudCI6IiIsInN0eWxlcyI6eyJiYWNrZ3JvdW5kQ29sb3IiOiIjZmZmZmZmIiwidGV4dENvbG9yIjoiIzFhMWEyZSIsInBhZGRpbmciOiIzMnB4IiwiYm9yZGVyUmFkaXVzIjoiMTZweCIsImJvcmRlckNvbG9yIjoiI2U1ZTdlYiIsImJvcmRlcldpZHRoIjoiMXB4IiwidGV4dEFsaWduIjoiY2VudGVyIiwiYW5pbWF0aW9uIjoibm9uZSJ9LCJvZmZlckRhdGEiOnsidGl0bGUiOiJQbGFubyBCw6FzaWNvIiwicHJpY2UiOiJSJCAxMCwwMCIsInBheW1lbnRUeXBlIjoiUGFnYW1lbnRvIMO6bmljbyIsImJlbmVmaXRzIjpbIkFjZXNzbyBhIG1haXMgZGUgMzUwMCBtaW5pc3PDqXJpZXMgZSBkb3JhbWFzIiwiVG9kb3Mgb3MgZXBpc8OzZGlvcyBsaWJlcmFkb3MgZG9zIG1lbGhvcmVzIGFwcHMiLCJBY2Vzc28gaW1lZGlhdG8iXSwiYnV0dG9uVGV4dCI6IlF1ZXJvIG8gUGxhbm8gQsOhc2ljbyIsImJ1dHRvblVybCI6IiIsImJ1dHRvbkNvbG9yIjoiIzIyYzU1ZSIsImFjY2VudENvbG9yIjoiIzIyYzU1ZSIsInBvcHVwIjp7ImVuYWJsZWQiOmZhbHNlLCJiYWRnZSI6IlVQR1JBREUgUFJFTUlVTSIsInRpdGxlIjoiUGFjb3RlIFByZW1pdW0iLCJwcmljZSI6IlIkIDEwLDAwIiwicGF5bWVudFR5cGUiOiJBY2Vzc28gVklUQUzDjUNJTyIsImJlbmVmaXRzIjpbIkJlbmVmw61jaW8gcHJlbWl1bSAxIiwiQmVuZWbDrWNpbyBwcmVtaXVtIDIiXSwicHJpbWFyeUJ1dHRvblRleHQiOiJRdWVybyBvIFByZW1pdW0iLCJwcmltYXJ5QnV0dG9uVXJsIjoiIyIsInNlY29uZGFyeUJ1dHRvblRleHQiOiJRdWVybyBzw7MgYSBvZmVydGEgYsOhc2ljYSIsInNlY29uZGFyeUJ1dHRvblVybCI6IiMiLCJhY2NlbnRDb2xvciI6IiNkNGE4NTMifSwicHJpY2VDb2xvciI6IiMyMmM1NWUiLCJib3JkZXJDb2xvciI6IiNlNWU3ZWIifX1dfSx7ImlkIjoiZWxfMTc5NDk1MjcwNDY4Nl9yeTBvMXYxaHciLCJ0eXBlIjoiaGVhZGluZyIsImNvbnRlbnQiOiJCZW0tdmluZG8gYW8gQ29uc3RydXRvciBkZSBQw6FnaW5hcyIsInN0eWxlcyI6eyJmb250U2l6ZSI6IjQ4cHgiLCJmb250V2VpZ2h0IjoiNzAwIiwidGV4dENvbG9yIjoiIzFhMWEyZSIsInRleHRBbGlnbiI6ImNlbnRlciIsInBhZGRpbmciOiI0MHB4IDIwcHggMjBweCIsImFuaW1hdGlvbiI6ImZhZGUtaW4ifX0seyJpZCI6ImVsXzE3OTQ5NTI3MDQ2ODZfbWFrOTBkZ2hhIiwidHlwZSI6InRleHQiLCJjb250ZW50IjoiQ3JpZSBww6FnaW5hcyBpbmNyw612ZWlzIGFycmFzdGFuZG8gZSBzb2x0YW5kbyBjb21wb25lbnRlcy4gUGVyc29uYWxpemUgY29yZXMsIGZvbnRlcywgYW5pbWHDp8O1ZXMgZSBtdWl0byBtYWlzISIsInN0eWxlcyI6eyJmb250U2l6ZSI6IjE4cHgiLCJmb250V2VpZ2h0IjoiNDAwIiwidGV4dENvbG9yIjoiIzZiNzI4MCIsInRleHRBbGlnbiI6ImNlbnRlciIsInBhZGRpbmciOiIwIDQwcHggMzBweCIsImFuaW1hdGlvbiI6ImZhZGUtaW4ifX0seyJpZCI6ImVsXzE3OTQ5NTI3MDQ2ODZfZzRrMWk3cHNvIiwidHlwZSI6ImJ1dHRvbiIsImNvbnRlbnQiOiJDb21lw6dhciBBZ29yYSIsImhyZWYiOiIjIiwic3R5bGVzIjp7ImZvbnRTaXplIjoiMThweCIsImZvbnRXZWlnaHQiOiI2MDAiLCJ0ZXh0Q29sb3IiOiIjZmZmZmZmIiwiYmFja2dyb3VuZENvbG9yIjoiIzNiODJmNiIsInRleHRBbGlnbiI6ImNlbnRlciIsInBhZGRpbmciOiIxNnB4IDMycHgiLCJib3JkZXJSYWRpdXMiOiIxMnB4IiwiYW5pbWF0aW9uIjoic2NhbGUifX0seyJpZCI6ImVsXzE3OTQ5NTI3MDQ2ODZfOHZjNGRwZzcyIiwidHlwZSI6InNwYWNlciIsImNvbnRlbnQiOiIiLCJzdHlsZXMiOnsiaGVpZ2h0IjoiNjBweCIsImFuaW1hdGlvbiI6Im5vbmUifX0seyJpZCI6ImVsXzE3OTQ5NTI3MDQ2ODZfY2J4Z3c3eHdjIiwidHlwZSI6ImNhcmQiLCJjb250ZW50IjoiQXJyYXN0ZSBlIFNvbHRlfFVzZSBvIHBhaW5lbCBlc3F1ZXJkbyBwYXJhIGFycmFzdGFyIGNvbXBvbmVudGVzIHBhcmEgc3VhIHDDoWdpbmEuIiwic3R5bGVzIjp7ImJhY2tncm91bmRDb2xvciI6IiNmOGZhZmMiLCJ0ZXh0Q29sb3IiOiIjMWExYTJlIiwicGFkZGluZyI6IjI0cHgiLCJib3JkZXJSYWRpdXMiOiIxNnB4IiwiYm9yZGVyQ29sb3IiOiIjZTJlOGYwIiwiYm9yZGVyV2lkdGgiOiIxcHgiLCJhbmltYXRpb24iOiJzbGlkZS11cCJ9fSx7ImlkIjoiZWxfMTc5NDk1MjcwNDY4Nl80MzQ4OXUxZ2YiLCJ0eXBlIjoiY2FyZCIsImNvbnRlbnQiOiJQZXJzb25hbGl6ZXxDbGlxdWUgZW0gcXVhbHF1ZXIgZWxlbWVudG8gcGFyYSBlZGl0YXIgc3VhcyBwcm9wcmllZGFkZXMgbm8gcGFpbmVsIGRpcmVpdG8uIiwic3R5bGVzIjp7ImJhY2tncm91bmRDb2xvciI6IiNmOGZhZmMiLCJ0ZXh0Q29sb3IiOiIjMWExYTJlIiwicGFkZGluZyI6IjI0cHgiLCJib3JkZXJSYWRpdXMiOiIxNnB4IiwiYm9yZGVyQ29sb3IiOiIjZTJlOGYwIiwiYm9yZGVyV2lkdGgiOiIxcHgiLCJhbmltYXRpb24iOiJzbGlkZS11cCJ9fSx7ImlkIjoiZWxfMTc5NDk1MjcwNDY4Nl9wdXF2b2FhMHkiLCJ0eXBlIjoiY2FyZCIsImNvbnRlbnQiOiJFeHBvcnRlfFF1YW5kbyB0ZXJtaW5hciwgY2xpcXVlIGVtIFwiRXhwb3J0YXIgSFRNTFwiIHBhcmEgYmFpeGFyIHN1YSBww6FnaW5hLiIsInN0eWxlcyI6eyJiYWNrZ3JvdW5kQ29sb3IiOiIjZjhmYWZjIiwidGV4dENvbG9yIjoiIzFhMWEyZSIsInBhZGRpbmciOiIyNHB4IiwiYm9yZGVyUmFkaXVzIjoiMTZweCIsImJvcmRlckNvbG9yIjoiI2UyZThmMCIsImJvcmRlcldpZHRoIjoiMXB4IiwiYW5pbWF0aW9uIjoic2xpZGUtdXAifX1dLCJwYWdlU3R5bGVzIjp7ImJhY2tncm91bmRDb2xvciI6IiMwMjJiNTUiLCJtYXhXaWR0aCI6IjQ4MHB4IiwicGFkZGluZyI6IjIwcHgiLCJ1c2VHcmFkaWVudCI6ZmFsc2UsImdyYWRpZW50Q29sb3IxIjoiIzFhMWEyZSIsImdyYWRpZW50Q29sb3IyIjoiIzBmMGYxYSIsImdyYWRpZW50RGlyZWN0aW9uIjoidG8gYm90dG9tIiwiZm9udEZhbWlseSI6IkludGVyLCBzYW5zLXNlcmlmIn0sInNjcmlwdFNldHRpbmdzIjp7InV0bWlmeVNjcmlwdCI6ZmFsc2UsImZhY2Vib29rUGl4ZWwiOmZhbHNlLCJmYWNlYm9va1BpeGVsSWQiOiIiLCJ1dG1pZnlQaXhlbCI6ZmFsc2UsInV0bWlmeVBpeGVsSWQiOiIiLCJiYWNrUmVkaXJlY3QiOmZhbHNlLCJiYWNrUmVkaXJlY3RVcmwiOiIiLCJ1cmdlbmN5QmFyIjpmYWxzZSwidXJnZW5jeUJhclN0eWxlIjoidGltZXIiLCJ1cmdlbmN5QmFyVGV4dCI6IkVzc2EgcHJvbW/Dp8OjbyBhY2FiYSBlbSIsInVyZ2VuY3lCYXJNaW51dGVzIjoyMCwidXJnZW5jeUJhckJnQ29sb3IiOiIjMjAxMTE5IiwidXJnZW5jeUJhclRleHRDb2xvciI6IiNmZmZmZmYiLCJ1cmdlbmN5QmFySGlnaGxpZ2h0Q29sb3IiOiIjZmZmZjAwIiwiZmFrZVB1cmNoYXNlIjp0cnVlLCJmYWtlUHVyY2hhc2VHZW5kZXIiOiJib3RoIiwiZmFrZVB1cmNoYXNlSW50ZXJ2YWwiOjE1LCJmYWtlUHVyY2hhc2VCZ0NvbG9yIjoiIzIyYzU1ZSIsImZha2VQdXJjaGFzZVRleHRDb2xvciI6IiNmZmZmZmYiLCJmYWtlUHVyY2hhc2VQcm9kdWN0TmFtZSI6Ik5vdm8gUm9tYW5jZSBkZSBFc2NyaXTDs3JpbyIsImZpeGVkQnV0dG9uIjpmYWxzZSwiZml4ZWRCdXR0b25UZXh0IjoiQ09NUFJBUiBBR09SQSIsImZpeGVkQnV0dG9uVXJsIjoiIyIsImZpeGVkQnV0dG9uQmdDb2xvciI6IiNkYzI2MjYiLCJmaXhlZEJ1dHRvblRleHRDb2xvciI6IiNmZmZmZmYiLCJmaXhlZEJ1dHRvbkNvbnRhaW5lckJnQ29sb3IiOiJyZ2JhKDAsMCwwLDAuOCkiLCJleGl0UG9wdXAiOnRydWUsImV4aXRQb3B1cFRpdGxlIjoiRXNwZXJlISIsImV4aXRQb3B1cFRleHQiOiJWb2PDqiBlc3TDoSBwcmVzdGVzIGEgcGVyZGVyIGVzc2Egb3BvcnR1bmlkYWRlIMO6bmljYSEiLCJleGl0UG9wdXBCdXR0b25UZXh0IjoiUVVFUk8gQVBST1ZFSVRBUiIsImV4aXRQb3B1cEJ1dHRvblVybCI6Imh0dHBzOi8vcGF5Lmxvd2lmeS5jb20uYnIvY2hlY2tvdXQucGhwP3Byb2R1Y3RfaWQ9SFNoenl1IiwiZXhpdFBvcHVwQmdDb2xvciI6IiMxYTFhMmUiLCJleGl0UG9wdXBUZXh0Q29sb3IiOiIjZmZmZmZmIiwiZXhpdFBvcHVwQnV0dG9uQmdDb2xvciI6IiMyMmM1NWUiLCJleGl0UG9wdXBCdXR0b25UZXh0Q29sb3IiOiIjZmZmZmZmIiwiZXhpdFBvcHVwSW1hZ2UiOiIiLCJleGl0UG9wdXBDbG9zZUJnQ29sb3IiOiJyZ2JhKDI1NSwyNTUsMjU1LDAuMSkiLCJleGl0UG9wdXBDbG9zZUljb25Db2xvciI6IiNmZmZmZmYiLCJleGl0UG9wdXBEZWNsaW5lVGV4dCI6Ik7Do28sIG9icmlnYWRvIiwiZXhpdFBvcHVwRGVjbGluZUJnQ29sb3IiOiJ0cmFuc3BhcmVudCIsImV4aXRQb3B1cERlY2xpbmVUZXh0Q29sb3IiOiIjOTk5OTk5IiwiY2xvYWtlckVuYWJsZWQiOmZhbHNlLCJjbG9ha2VyQmxvY2tEZXNrdG9wIjpmYWxzZSwiY2xvYWtlckJsb2NrRm9yZWlnbiI6ZmFsc2UsImNsb2FrZXJCbG9ja0JvdHMiOnRydWUsImNsb2FrZXJCbG9ja1JlZmVycmVycyI6ZmFsc2UsImNsb2FrZXJCbG9ja2VkUmVmZXJyZXJzIjoiIiwiY2xvYWtlclJlZGlyZWN0VXJsIjoiaHR0cHM6Ly9nb29nbGUuY29tIiwiY2xvYWtlclJlZGlyZWN0SW5GcmFtZSI6ZmFsc2UsImNsb2FrZXJBbnRpSW5zcGVjdCI6ZmFsc2UsImNsb2FrZXJBbnRpU2NyZWVuc2hvdCI6ZmFsc2UsImNsb2FrZXJTZWNyZXRUb2tlbiI6IiIsImNsb2FrZXJUb2tlbkJ5cGFzcyI6ZmFsc2UsImNsb2FrZXJSZXF1aXJlVXRtU291cmNlIjpmYWxzZSwiY2xvYWtlckFsbG93ZWRVdG1Tb3VyY2VzIjoiZmIsIGlnLCBpbnN0YWdyYW0sIGZhY2Vib29rIiwiZXhpdFBvcHVwRW5hYmxlZCI6ZmFsc2UsImZha2VOb3RpZmljYXRpb25zRW5hYmxlZCI6ZmFsc2V9fQ==:END_BUILD_EASY_DATA -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            overflow-x: hidden;
+            overflow-y: auto;
+            height: 100%;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #022b55;
+            min-height: 100%;
+            padding: 0;
+            overflow-x: hidden;
+            overflow-y: auto;
+            width: 100%;
+            max-width: 100vw;
+            -webkit-overflow-scrolling: touch;
+            touch-action: pan-y;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 0;
+            }
+        }
+        
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            background-color: #022b55;
+            padding: 20px;
+            border-radius: 0px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            width: 100%;
+        }
+        
+        .content > :not(.section) {
+            margin-bottom: 16px;
+        }
+        
+        .content > :not(.section):last-child {
+            margin-bottom: 0;
+        }
+        
+        .content > .section {
+            margin-bottom: 0;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideLeft {
+            from {
+                opacity: 0;
+                transform: translateX(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideRight {
+            from {
+                opacity: 0;
+                transform: translateX(-40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        @keyframes pulseBtn {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            }
+        }
+        
+        @keyframes shakeBtn {
+            0%, 100% { transform: translateX(0); }
+            10%, 30%, 50%, 70%, 90% { transform: translateX(-2px); }
+            20%, 40%, 60%, 80% { transform: translateX(2px); }
+            95% { transform: translateX(0); }
+        }
+        
+        @keyframes glowBtn {
+            0%, 100% {
+                box-shadow: 0 0 5px rgba(255, 255, 255, 0.2), 0 4px 14px rgba(0, 0, 0, 0.2);
+            }
+            50% {
+                box-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px currentColor, 0 4px 14px rgba(0, 0, 0, 0.2);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 0px;
+            }
+            
+            .container {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="content">
+        <div class="section" style="position: relative; background-color: #022b55; padding-top: 24px; padding-bottom: 24px; padding-left: 16px; padding-right: 16px; margin-left: calc(-1 * 20px); margin-right: calc(-1 * 20px); width: calc(100% + 2 * 20px); margin-top: calc(-1 * 20px);"><div style="position: relative; z-index: 2;"><h2 style="color: #f7f7f8; font-size: 24px; font-weight: 700; text-align: center; padding: 16px;">Novo Romance de Escritório</h2>
+<div style="display: flex; justify-content: center; margin-top: 0px; margin-bottom: 0px;"><img src="https://pub-e1f5fdc45b674261b2ccda7b284afbb9.r2.dev/images/2a4c87c3-b7e7-4234-b03d-ecadc0a93c92/1794953084_c96a6535a3da.jpg" alt="Imagem" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover;  " /></div>
+
+<div style="background-color: #ffffff; color: #1a1a2e; text-align: center; padding: 32px; border-radius: 16px; border-color: #e5e7eb; border-width: 1px; border-style: solid; text-align: center; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); border: 2px solid #e5e7eb; position: relative; overflow: hidden;">
+          
+          
+          <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 16px; color: #1a1a2e;">Plano Básico</h3>
+          <p style="font-size: 14px; opacity: 0.7; margin-bottom: 8px;">Pagamento único</p>
+          
+          <div style="margin-bottom: 24px;">
+            <span style="font-size: 48px; font-weight: 800; color: #22c55e; line-height: 1;">R$ 9,99</span>
+          </div>
+          <div style="height: 1px; background-color: #e5e7eb; margin: 0 -16px 24px;"></div>
+          <div style="text-align: left; margin-bottom: 24px;">
+            
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+          <div style="width: 20px; height: 20px; border-radius: 50%; background-color: #22c55e; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <span style="font-size: 15px; line-height: 1.5;">Acesso a mais de 3500 minisséries e doramas</span>
+        </div>
+      
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+          <div style="width: 20px; height: 20px; border-radius: 50%; background-color: #22c55e; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <span style="font-size: 15px; line-height: 1.5;">Todos os episódios liberados dos melhores apps</span>
+        </div>
+      
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+          <div style="width: 20px; height: 20px; border-radius: 50%; background-color: #22c55e; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <span style="font-size: 15px; line-height: 1.5;">Acesso imediato</span>
+        </div>
+      
+          </div>
+      <button type="button" data-href="https://pay.lowify.com.br/checkout.php?product_id=HShzyu" onclick="event.preventDefault();event.stopImmediatePropagation();window.open('https://pay.lowify.com.br/checkout.php?product_id=HShzyu','_blank');return false;" style="display: block; width: 100%; padding: 16px 24px; background-color: #22c55e; color: #ffffff; font-size: 16px; font-weight: 600; text-align: center; border-radius: 12px; box-shadow: 0 4px 14px #22c55e40;  border: none; cursor: pointer;">Quero o Plano Básico</button>
+        </div></div></div>
+        
+        
+    
+    <!-- Exit Intent Popup -->
+    <div id="exit-popup" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,0.85);z-index:2147483647;align-items:center;justify-content:center;padding:16px;overflow-y:auto;">
+      <div style="background-color:#1a1a2e;border-radius:16px;padding:24px;max-width:380px;width:100%;position:relative;margin:auto;box-shadow:0 20px 60px rgba(0,0,0,0.5);animation:exitPopupIn 0.3s ease-out;">
+        <button onclick="document.getElementById('exit-popup').style.display='none';sessionStorage.setItem('exitPopupClosed','1');" style="position:absolute;top:12px;right:12px;background:rgba(255,255,255,0.1);border:none;color:#ffffff;cursor:pointer;font-size:20px;line-height:1;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;">&times;</button>
+        
+        <h3 style="font-size:28px;font-weight:800;color:#ffffff;text-align:center;margin-bottom:12px;">Espere!</h3>
+        <p style="font-size:16px;color:#ffffff;text-align:center;margin-bottom:24px;opacity:0.9;line-height:1.5;">Você está prestes a perder essa oportunidade única!</p>
+        <a href="https://pay.lowify.com.br/checkout.php?product_id=HShzyu" style="display:block;width:100%;padding:16px 24px;background-color:#22c55e;color:#ffffff;font-size:16px;font-weight:700;text-align:center;border-radius:12px;text-decoration:none;text-transform:uppercase;box-shadow:0 4px 15px #22c55e40;">QUERO APROVEITAR</a>
+        <button onclick="document.getElementById('exit-popup').style.display='none';sessionStorage.setItem('exitPopupClosed','1');" style="display:block;width:100%;padding:8px 16px;margin-top:12px;background:transparent;color:#999999;font-size:14px;border:none;cursor:pointer;text-align:center;border-radius:8px;">Não, obrigado</button>
+      </div>
+    </div>
+    <style>
+      @keyframes exitPopupIn {
+        from { opacity: 0; transform: scale(0.9) translateY(-20px); }
+        to { opacity: 1; transform: scale(1) translateY(0); }
+      }
+    </style>
+    <script>
+    (function() {
+      var shown = false;
+      var popup = document.getElementById('exit-popup');
+      var exitPopupStateKey = 'exitPopupState_' + window.location.pathname;
+      
+      function showExitPopup() {
+        if (shown || sessionStorage.getItem('exitPopupClosed')) return;
+        shown = true;
+        popup.style.display = 'flex';
+      }
+      
+      // Mouse leave detection (desktop)
+      document.addEventListener('mouseout', function(e) {
+        if (e.clientY < 10) showExitPopup();
+      });
+      
+      // Scroll to top detection (mobile) - delay activation to avoid triggering on page load
+      var scrollDetectionReady = false;
+      var userHasScrolled = false;
+      setTimeout(function() { scrollDetectionReady = true; }, 3000);
+      window.addEventListener('scroll', function() { userHasScrolled = true; }, { once: true });
+      document.addEventListener('touchend', function() {
+        if (!scrollDetectionReady || !userHasScrolled) return;
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop <= 0) {
+          setTimeout(showExitPopup, 500);
+        }
+      });
+      
+      // Back button detection - improved logic
+      // Only add our state if we don't already have one
+      if (!window.history.state || !window.history.state.exitPopup) {
+        window.history.replaceState({exitPopup: true, originalState: window.history.state}, '', window.location.href);
+        window.history.pushState({exitPopup: true, isExitTrap: true}, '', window.location.href);
+      }
+      
+      window.addEventListener('popstate', function(e) {
+        // Check if this is our exit trap state being popped
+        if (e.state && e.state.exitPopup && !e.state.isExitTrap) {
+          // User pressed back and hit our trap, show popup and re-add trap
+          if (!shown && !sessionStorage.getItem('exitPopupClosed')) {
+            window.history.pushState({exitPopup: true, isExitTrap: true}, '', window.location.href);
+            showExitPopup();
+          }
+        } else if (!e.state || (!e.state.exitPopup)) {
+          // User is actually navigating away (came from external page), let them go
+          // but try to show popup first
+          if (!shown && !sessionStorage.getItem('exitPopupClosed')) {
+            showExitPopup();
+          }
+        }
+      });
+      
+      // Fallback: beforeunload for closing tab/window
+      window.addEventListener('beforeunload', function(e) {
+        if (!shown && !sessionStorage.getItem('exitPopupClosed')) {
+          showExitPopup();
+        }
+      });
+    })();
+    </script>
+    
+    
+  <script>
+    (function() {
+      try {
+        var STORAGE_KEY = '_lowify_utm_params';
+        var trackingKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 
+                           'utm_id', 'fbclid', 'gclid', 'ref', 'src', 'sck', 'xcod', 'ttclid', 'li_fat_id'];
+        
+        // Function to get stored UTMs from localStorage
+        function getStoredUtms() {
+          try {
+            var stored = localStorage.getItem(STORAGE_KEY);
+            return stored ? JSON.parse(stored) : {};
+          } catch(e) { return {}; }
+        }
+        
+        // Function to save UTMs to localStorage
+        function saveUtms(params) {
+          try {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(params));
+          } catch(e) {}
+        }
+        
+        // Capture UTMs from the real page URL.
+        // IMPORTANT: published pages are rendered inside an iframe via srcDoc,
+        // so window.location.search inside the iframe is usually empty.
+        // We must fallback to the top/parent URL (same-origin) or referrer.
+        function getEffectiveSearch() {
+          try {
+            var s = (window.location && window.location.search) ? window.location.search : '';
+            if (s) return s;
+          } catch(e) {}
+
+          // Try top (best) then parent
+          try {
+            if (window.top && window.top !== window && window.top.location) {
+              var ts = window.top.location.search || '';
+              if (ts) return ts;
+            }
+          } catch(e) {}
+
+          try {
+            if (window.parent && window.parent !== window && window.parent.location) {
+              var ps = window.parent.location.search || '';
+              if (ps) return ps;
+            }
+          } catch(e) {}
+
+          // Last resort: parse referrer
+          try {
+            if (document.referrer) {
+              var refUrl = new URL(document.referrer);
+              return refUrl.search || '';
+            }
+          } catch(e) {}
+
+          return '';
+        }
+
+        var currentParams = getEffectiveSearch();
+        var urlParams = new URLSearchParams(currentParams || '');
+        var newUtmParams = {};
+        
+        urlParams.forEach(function(value, key) {
+          // Only capture if value is not empty
+          if (value && value.trim() !== '') {
+            var lowerKey = key.toLowerCase();
+            if (key.startsWith('utm_') || trackingKeys.includes(lowerKey)) {
+              newUtmParams[key] = value;
+            }
+          }
+        });
+        
+        // Merge with stored UTMs (new params override old ones)
+        var storedUtms = getStoredUtms();
+        var utmParams = {};
+        
+        // First add stored params (only non-empty)
+        for (var k in storedUtms) {
+          if (storedUtms[k] && storedUtms[k].trim() !== '') {
+            utmParams[k] = storedUtms[k];
+          }
+        }
+        
+        // Then override with new params from URL (only non-empty)
+        for (var k in newUtmParams) {
+          if (newUtmParams[k] && newUtmParams[k].trim() !== '') {
+            utmParams[k] = newUtmParams[k];
+          }
+        }
+        
+        // Save merged params back to localStorage
+        if (Object.keys(utmParams).length > 0) {
+          saveUtms(utmParams);
+        }
+        
+        // If no tracking params found, exit
+        if (Object.keys(utmParams).length === 0) return;
+        
+        // Function to append params to a URL (FORCE override existing params)
+        function appendParamsToUrl(url) {
+          if (!url || url === '#' || url.startsWith('javascript:')) return url;
+          
+          try {
+            var urlObj = new URL(url, window.location.origin);
+            
+            // FORCE override - always set our UTMs, replacing any existing values
+            // This ensures our tracked UTMs override "organic" or empty values
+            for (var key in utmParams) {
+              var val = utmParams[key];
+              if (val && val.trim() !== '') {
+                // Always override - remove existing and set new
+                urlObj.searchParams.delete(key);
+                urlObj.searchParams.set(key, val);
+              }
+            }
+            
+            // Also remove any empty UTM params that might be in the URL
+            var keysToCheck = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+            keysToCheck.forEach(function(k) {
+              var existing = urlObj.searchParams.get(k);
+              // Remove if empty, "organic" (default), or not in our tracked params
+              if (existing !== null && (existing === '' || existing === 'organic') && !utmParams[k]) {
+                urlObj.searchParams.delete(k);
+              }
+            });
+            
+            return urlObj.toString();
+          } catch(e) {
+            // If URL parsing fails, we need to handle manually
+            // First, try to remove existing UTM params from the URL
+            var cleanUrl = url;
+            var trackingToReplace = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'utm_id'];
+            trackingToReplace.forEach(function(param) {
+              // Remove param=value& or &param=value or ?param=value
+              cleanUrl = cleanUrl.replace(new RegExp('[?&]' + param + '=[^&]*', 'gi'), '');
+            });
+            // Clean up any double && or trailing ?
+            cleanUrl = cleanUrl.replace(/&&/g, '&').replace(/?&/g, '?').replace(/?$/g, '').replace(/&$/g, '');
+            
+            // Now append our params
+            var paramsToAdd = [];
+            for (var k in utmParams) {
+              var v = utmParams[k];
+              if (v && v.trim() !== '') {
+                paramsToAdd.push(encodeURIComponent(k) + '=' + encodeURIComponent(v));
+              }
+            }
+            if (paramsToAdd.length === 0) return cleanUrl || url;
+            var separator = cleanUrl.includes('?') ? '&' : '?';
+            return cleanUrl + separator + paramsToAdd.join('&');
+          }
+        }
+        
+        // Process all links on page load
+        function processLinks() {
+          var links = document.querySelectorAll('a[href]');
+          links.forEach(function(link) {
+            var href = link.getAttribute('href');
+            if (href && href !== '#' && !href.startsWith('javascript:') && !href.startsWith('#')) {
+              link.setAttribute('href', appendParamsToUrl(href));
+            }
+          });
+        }
+        
+        // Run on DOMContentLoaded
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', processLinks);
+        } else {
+          processLinks();
+        }
+        
+        // Also observe for dynamically added links (popups, etc)
+        var observer = new MutationObserver(function(mutations) {
+          mutations.forEach(function(mutation) {
+            mutation.addedNodes.forEach(function(node) {
+              if (node.nodeType === 1) {
+                if (node.tagName === 'A' && node.hasAttribute('href')) {
+                  var href = node.getAttribute('href');
+                  if (href && href !== '#' && !href.startsWith('javascript:') && !href.startsWith('#')) {
+                    node.setAttribute('href', appendParamsToUrl(href));
+                  }
+                }
+                // Check child links
+                var childLinks = node.querySelectorAll ? node.querySelectorAll('a[href]') : [];
+                childLinks.forEach(function(link) {
+                  var href = link.getAttribute('href');
+                  if (href && href !== '#' && !href.startsWith('javascript:') && !href.startsWith('#')) {
+                    link.setAttribute('href', appendParamsToUrl(href));
+                  }
+                });
+              }
+            });
+          });
+        });
+        
+        observer.observe(document.body || document.documentElement, { 
+          childList: true, 
+          subtree: true 
+        });
+        
+        // ===== NAVIGATION INTERCEPTORS (window.open / location / inline onclick / forms) =====
+        // Goal: pass UTMs even when navigation is triggered by JS (buttons, custom HTML, etc.)
+
+        // Intercept window.open (works in most browsers)
+        try {
+          var originalWindowOpen = window.open;
+          if (originalWindowOpen) {
+            window.open = function(url, target, features) {
+              if (url && typeof url === 'string') {
+                url = appendParamsToUrl(url);
+              }
+              return originalWindowOpen.call(window, url, target, features);
+            };
+          }
+        } catch(e) {}
+
+        // Intercept Location.assign/replace at the prototype level (more compatible than overwriting instance methods)
+        try {
+          var locProto = Object.getPrototypeOf(window.location);
+          if (locProto) {
+            if (typeof locProto.assign === 'function') {
+              var originalAssign = locProto.assign;
+              locProto.assign = function(url) {
+                if (url && typeof url === 'string') {
+                  url = appendParamsToUrl(url);
+                }
+                return originalAssign.call(this, url);
+              };
+            }
+            if (typeof locProto.replace === 'function') {
+              var originalReplace = locProto.replace;
+              locProto.replace = function(url) {
+                if (url && typeof url === 'string') {
+                  url = appendParamsToUrl(url);
+                }
+                return originalReplace.call(this, url);
+              };
+            }
+          }
+        } catch(e) {}
+
+        // Best-effort intercept for location.href setter (some browsers forbid redefining)
+        try {
+          var proto = Object.getPrototypeOf(window.location);
+          var hrefDescriptor = proto ? Object.getOwnPropertyDescriptor(proto, 'href') : null;
+          if (!hrefDescriptor) {
+            hrefDescriptor = Object.getOwnPropertyDescriptor(Location.prototype, 'href');
+          }
+          if (hrefDescriptor && hrefDescriptor.set) {
+            var originalHrefSetter = hrefDescriptor.set;
+            Object.defineProperty(hrefDescriptor === (proto && Object.getOwnPropertyDescriptor(proto, 'href')) ? proto : Location.prototype, 'href', {
+              get: hrefDescriptor.get,
+              set: function(url) {
+                if (url && typeof url === 'string') {
+                  url = appendParamsToUrl(url);
+                }
+                return originalHrefSetter.call(this, url);
+              },
+              configurable: true
+            });
+          }
+        } catch(e) {}
+
+        function patchInlineOnclick(el) {
+          try {
+            if (!el || !el.getAttribute) return;
+            var onclick = el.getAttribute('onclick');
+            if (!onclick) return;
+
+            // Replace any hardcoded URLs inside onclick="..." with UTM-appended versions.
+            // Works for both single and double quotes inside the attribute.
+            // NOTE: do not include the backtick char in this regex because this script is embedded in a JS template literal.
+            var replaced = onclick.replace(/(https?://[^s'"<>]+)(?![^s]*))/g, function(u) {
+              return appendParamsToUrl(u);
+            });
+
+            if (replaced !== onclick) {
+              el.setAttribute('onclick', replaced);
+            }
+          } catch(e) {}
+        }
+
+        function patchFormAction(form) {
+          try {
+            if (!form) return;
+            var action = form.getAttribute('action');
+            if (action) form.setAttribute('action', appendParamsToUrl(action));
+
+            // Also handle <button formaction="...">
+            var btns = form.querySelectorAll ? form.querySelectorAll('[formaction]') : [];
+            btns.forEach(function(b) {
+              var fa = b.getAttribute('formaction');
+              if (fa) b.setAttribute('formaction', appendParamsToUrl(fa));
+            });
+          } catch(e) {}
+        }
+
+        // Capture-phase click patching (runs before inline onclick and most listeners)
+        document.addEventListener('click', function(e) {
+          try {
+            var node = e.target;
+            while (node && node !== document.body) {
+              // Anchor: patch right before navigation
+              if (node.tagName === 'A' && node.getAttribute) {
+                var href = node.getAttribute('href');
+                if (href && href !== '#' && !href.startsWith('javascript:') && !href.startsWith('#')) {
+                  node.setAttribute('href', appendParamsToUrl(href));
+                }
+                patchInlineOnclick(node);
+                break;
+              }
+
+              // Buttons / custom clickable elements
+              if (node.getAttribute) {
+                // data-href style navigation
+                var dataHref = node.getAttribute('data-href') || node.getAttribute('data-url') || node.getAttribute('data-link');
+                if (dataHref) {
+                  var patched = appendParamsToUrl(dataHref);
+                  node.setAttribute('data-href', patched);
+                  node.setAttribute('data-url', patched);
+                  node.setAttribute('data-link', patched);
+                }
+
+                // inline onclick with hardcoded URL
+                patchInlineOnclick(node);
+
+                // if inside a form, patch form action too
+                var form = node.closest ? node.closest('form') : null;
+                if (form) patchFormAction(form);
+              }
+
+              node = node.parentElement;
+            }
+          } catch(err) {}
+        }, true);
+
+        // Patch on submit too (covers Enter-to-submit, programmatic submits, etc)
+        document.addEventListener('submit', function(e) {
+          try { patchFormAction(e.target); } catch(err) {}
+        }, true);
+        
+      } catch(e) { console.warn('UTM passthrough error:', e); }
+    })();
+  </script>
+    <script>
+      (function() {
+        try {
+          var names = ["Letícia","Maria","Ana","Juliana","Fernanda","Camila","Beatriz","Larissa","Amanda","Gabriela","Mariana","Carolina","Rafaela","Patrícia","Bruna","Lucas","Pedro","João","Gabriel","Rafael","Bruno","Carlos","Matheus","Felipe","Gustavo","Ricardo","André","Marcelo","Thiago","Leonardo"];
+          var productName = "Novo Romance de Escritório";
+          var interval = 15 * 1000;
+          
+          function getRandomName() {
+            return names[Math.floor(Math.random() * names.length)];
+          }
+          
+          function showNotification() {
+            try {
+              var existing = document.getElementById('fake-purchase-notification');
+              if (existing) existing.remove();
+              
+              var notification = document.createElement('div');
+              notification.id = 'fake-purchase-notification';
+              notification.innerHTML = '<div style="width:40px;height:40px;border-radius:50%;background-color:rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-size:18px;">✓</div><div><div style="font-weight:600;font-size:14px;">' + getRandomName() + ' acabou de comprar</div><div style="font-size:12px;opacity:0.8;">' + productName + '</div></div>';
+              notification.style.cssText = 'position:fixed;bottom:20px;left:20px;background-color:#22c55e;color:#ffffff;padding:12px 20px;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.3);z-index:9998;display:flex;align-items:center;gap:12px;animation:slideInLeft 0.4s ease-out;max-width:300px;';
+              document.body.appendChild(notification);
+              
+              setTimeout(function() {
+                if (notification.parentNode) notification.remove();
+              }, 4000);
+            } catch(e) { console.warn('Fake notification render error:', e); }
+          }
+          
+          setTimeout(showNotification, 3000);
+          setInterval(showNotification, interval);
+        } catch(e) { console.warn('Fake purchase script error:', e); }
+      })();
+    </script>
+    <style>
+      @keyframes slideInLeft {
+        from { transform: translateX(-100%); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+      }
+    </style>
+    
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"f714ff0a30234c7f958f42fbedf14afd","spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>
