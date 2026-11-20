@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cadastro</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #5688f5, #c9a9f5, #83c8f5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    width: 100%;
+    max-width: 380px;
+    padding: 35px 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+h2 {
+    color: #24213e;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 24px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    border: 2px solid #dddddd;
+    border-radius: 30px;
+    padding: 14px 18px;
+    margin-bottom: 22px;
+    font-size: 16px;
+    outline: none;
+    background: #fff;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #8060dc;
+    box-shadow: 0 0 5px #8060dc55;
+}
+
+button {
+    width: 100%;
+    background: #8060dc;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #6544c4;
+    transform: translateY(-2px);
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    
+<div style="display: flex; justify-content: center; margin-top: 0px; margin-bottom: 0px;"><img src="https://pub-e1f5fdc45b674261b2ccda7b284afbb9.r2.dev/images/2a4c87c3-b7e7-4234-b03d-ecadc0a93c92/1794953084_c96a6535a3da.jpg" alt="Imagem" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover;  " /></div>
+     <h2>Cadastre-se agora!</h2>
+    <form onsubmit="redirecionar(event)">
+
+        <label for="nome">Name</label>
+        <input
+            type="text"
+            id="nome"
+            name="nome"
+            placeholder="Seu nome"
+            required
+        >
+
+        <label for="email">Email</label>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="seuemail@gmail.com"
+            required
+        >
+
+        <button type="submit">
+            ASSISTIR GRATIS
+        </button>
+
+    </form>
+
+</div>
+
+<script>
+function redirecionar(event) {
+    event.preventDefault();
+
+    // COLOQUE SEU LINK DE DESTINO AQUI
+    const linkDestino = "https://pay.lowify.com.br/checkout?product_id=HShzyu";
+
+    window.location.href = linkDestino;
+}
+</script>
+
+</body>
+</html>
